@@ -28,7 +28,7 @@ VALIDATE(){
 dnf list installed mysql &>>$Log_File # Installed if it is not found
 
 if [ $? -ne 0 ]; then
-dnf install mysql -y
+dnf install mysql -y &>>$Log_File
 VALIDATE $1 "MYSQL"
 else
     echo -e "MyQL already exist ... $Y SKIPPING INSTALLATION $N" | tee -a $Log_File
@@ -37,7 +37,7 @@ fi
 dnf list installed nginx &>>$Log_File
 
 if [ $? -ne 0 ]; then
-dnf install nginx -y
+dnf install nginx -y &>>$Log_File
 VALIDATE $1 "NGINX"
 else
     echo -e "NGINX already exist ... $Y SKIPPING INSTALLATION $N" | tee -a $Log_File
@@ -46,7 +46,7 @@ fi
 dnf list installed python3 &>>$Log_File
 
 if [ $? -ne 0 ]; then
-dnf install python3 -y
+dnf install python3 -y &>>$Log_File
 VALIDATE $1 "Pythong3"
 else
     echo -e "Pythong3 already exist ... $Y SKIPPING INSTALLATION $N" | tee -a $Log_File

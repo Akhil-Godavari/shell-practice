@@ -2,7 +2,7 @@
 set -e 
 
 error(){
-    echo "There is an error"
+    echo "There is an error $LINENO and Command is $BASH_COMMAND"
 
 }
 

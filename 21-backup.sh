@@ -31,8 +31,8 @@ if [ $# -lt 2 ]; then
     USAGE
 fi
 
-if [ ! -d $Source_Dir ]; then
-    echo -e " $R Source $Source_dir does not exist "
+if [ ! -d $Source_dir ]; then
+    echo -e "Source $R $Source_dir does not exist "
     exit 1
 fi
 

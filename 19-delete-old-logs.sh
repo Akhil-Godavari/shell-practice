@@ -1,3 +1,5 @@
+#!/bin/bash 
+
 UserID=$(id -u)
 R="\e[31m"
 G="\e[32m"
@@ -27,5 +29,5 @@ do
     echo " Deleting the file: $filepath "
     rm -rf $filepath
     echo " Deleted the file: $filepath "
-    
+
 done <<< $Files_to_Delete

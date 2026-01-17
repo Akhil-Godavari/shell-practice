@@ -45,9 +45,11 @@ fi
 Files=$(find $Source_Dir -name "*.log" -type f -mtime +$Days)
 
 if [ ! -z "${Files}" ]; then
-    echo -e " $G Files Found $N "
+    echo "Files Found : $Files"
     TIMESTAMP=$(date +%F-%H-%M)
     ZIP_FILE_NAME="$Dest_dir/app-logs-$TIMESTAMP.zip"
+    echo "Zip file name: $ZIP_FILE_NAME"
+    echo $Files | zip -@ -j "$ZIP_FILE_NAME"
 
 else
     echo -e "No Files to archieve ... $Y SKIPPING $N "

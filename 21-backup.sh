@@ -67,6 +67,7 @@ if [ ! -z "${Files}" ]; then
     echo " Deleted the file: $filepath "
 
     done <<< $Files
+    echo -e " $G Files Deleted Successfully from the Source Directory"
     else
     echo -e " Archieval $R FAILURE $N "
     fi

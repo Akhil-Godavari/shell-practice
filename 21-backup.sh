@@ -32,11 +32,11 @@ if [ $# -lt 2 ];then
 fi
 
 if [ ! -d $Source_Dir ];then
-    echo -e " $R $Source_dir does not exist"
+    echo -e " $R Source $Source_dir does not exist "
     exit 1
 fi
 
 if [ ! -d $dest_dir ];then
-    echo -e " $R $dest_dir does not exit"
+    echo -e "Destination $R $Dest_dir Does not exist "
     exit 1
 fi

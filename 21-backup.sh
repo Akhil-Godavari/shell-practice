@@ -27,16 +27,16 @@ USAGE(){
     exit 1
 }
 
-if [ $# -lt 2 ];then
+if [ $# -lt 2 ]; then
     USAGE
 fi
 
-if [ ! -d $Source_Dir ];then
+if [ ! -d $Source_Dir ]; then
     echo -e " $R Source $Source_dir does not exist "
     exit 1
 fi
 
-if [ ! -d $dest_dir ];then
+if [ ! -d $Dest_dir ]; then
     echo -e "Destination $R $Dest_dir Does not exist "
     exit 1
 fi

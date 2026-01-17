@@ -12,7 +12,7 @@ Days=${3:-14} #if not provided consider as 14 days as a default
 
 Logs_Folder="/var/log/shell-script"
 Script_Name=$( echo $0 | cut -d "." -f1 )
-Log_File="$Logs_Folder/$Script_Name.log"
+Log_File="$Logs_Folder/backup.log" #modified to run the script as command
 
 mkdir -p $Logs_Folder
 echo " Script started executing at: $(date)"

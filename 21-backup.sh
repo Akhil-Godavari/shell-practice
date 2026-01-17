@@ -6,6 +6,8 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[37m"
 
+Source_dir=$1
+Dest_dir=$2
 
 Logs_Folder="/var/log/shell-script"
 Script_Name=$( echo $0 | cut -d "." -f1 )
@@ -27,4 +29,14 @@ USAGE(){
 
 if [ $# -lt 2 ];then
     USAGE
+fi
+
+if [ ! -d $Source_Dir ];then
+    echo -e " $R $Source_dir does not exist"
+    exit 1
+fi
+
+if [ ! -d $dest_dir ];then
+    echo -e " $R $dest_dir does not exit"
+    exit 1
 fi

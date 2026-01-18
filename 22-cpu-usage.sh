@@ -18,5 +18,5 @@ done <<< $DISK_USAGE
 
 echo -e "Message Body: $MESSAGE"
 
-sh 23-mail.sh mail.sh "guntipratiksha.16@gmai.com" "High Disk Usage Alert" "High Disk USage" "$MESSAGE" "$IP_ADDRESS" "DevOps Team"
+sh 23-mail.sh "guntipratiksha.16@gmail.com" "High Disk Usage Alert" "High Disk USage" "$MESSAGE" "$IP_ADDRESS" "DevOps Team"
 
